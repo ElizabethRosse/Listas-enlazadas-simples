@@ -1,5 +1,5 @@
 # ListasEnC
-implemetación de listas simples enlazadas en lenguaje C
+Implemetación de listas simples enlazadas en lenguaje C
 
 Métodos:  
 *longitud de una lista.
