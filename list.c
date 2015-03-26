@@ -1,3 +1,9 @@
+/*
+  UNAM. Facultad de Ciencias. 
+  Modelado y programación
+  Muñiz Rivas Elizabeth
+ */
+
 #include <stdio.h>
 #include "list.h"
 #include <stdlib.h>
@@ -12,10 +18,11 @@ struct node_struct * newNode(int v){
 	return n;
 }
 
+/* Elimina un nodo de la lista*/
 void deleteNode(struct node_struct *n){
 	free(n);
 }
-
+/*Imprime la lista de forma bonita*/
 void print_list(struct node_struct* l){
 	printf("[");
 	for(; l != NULL; l= l->next){
@@ -23,7 +30,7 @@ void print_list(struct node_struct* l){
 	}
 	printf("\n");
 }
-
+/*Regresa un entero con la longitud de la lista(método iterativo)*/
 int len_ite(struct node_struct *l){
   int i = 0;
   while (l != NULL){
@@ -32,7 +39,7 @@ int len_ite(struct node_struct *l){
   }
   return i;
 }
-
+/*Regresa un entero con la longitud de la lista(método recursivo)*/
 int len_rec(struct node_struct *l){
   if (l == NULL)
     return 0;
@@ -41,7 +48,7 @@ int len_rec(struct node_struct *l){
   else
     return 1+(len_rec(l->next));
 }
-
+/*Regresa un entero con el elemento máximo de la lista*/
 int max(struct node_struct *l){
   int max = l->value;
   while(l != NULL){
@@ -51,7 +58,7 @@ int max(struct node_struct *l){
   }
   return max;
 }
-
+/*Dada una lista, regresa la reversa de la lista sin modificar la original */
 struct node_struct* reversa(struct node_struct *l){
   struct node_struct* reversa = NULL;
   while(l != NULL){
